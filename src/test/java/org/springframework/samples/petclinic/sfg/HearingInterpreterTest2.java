@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = {BaseConfig.class, LaurelConfig.class})
-public class HearingInterpreterTest {
+@ContextConfiguration(classes = {BaseConfig.class, YannyConfig.class})
+public class HearingInterpreterTest2 {
 
     @Autowired
     HearingInterpreter hearingInterpreter;
@@ -18,6 +18,6 @@ public class HearingInterpreterTest {
     @Test
     public void whatIHeard() {
         String word = hearingInterpreter.whatIHeard();
-        assertEquals("Laurel", word);
+        assertEquals("Yanny", word);
     }
 }
