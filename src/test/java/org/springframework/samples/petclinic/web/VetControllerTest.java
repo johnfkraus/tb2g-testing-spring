@@ -48,7 +48,7 @@ class VetControllerTest {
         // then
         then(clinicService).should().findVets();
         then(model).should().put(anyString(), any());
-        assertThat(view).isEqualTo("vets/vetList");
+        assertThat(view).isEqualToIgnoringCase("vets/vetList");
     }
 
     @Test
